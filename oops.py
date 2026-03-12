@@ -18,10 +18,14 @@ async def get_gemini_fix(error_message):
     client = GeminiClient(psid, psidts)
     await client.init(timeout=30, auto_refresh=True)
     prompt = (
-        "You are a helpful coding assistant. I got an error in my terminal. "
-        "Please identify the file, explain the error briefly, and provide a fix.\n\n"
-        f"Error:\n{error_message}"
-    )
+    "You are a senior developer. Analyze this terminal error trace. "
+    "Strictly follow this format for your response and do not print anything besides these:\n\n"
+    "file: [Path to the file that caused the error]\n"
+    "error: [A short, one-sentence explanation of what went wrong]\n"
+    "fix: [The exact code snippet or command to fix the issue]\n\n"
+    f"Error Trace:\n{error_message}"
+)
+
 
     response = await client.generate_content(prompt=prompt)
     print(response.text)
