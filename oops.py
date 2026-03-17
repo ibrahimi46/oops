@@ -55,7 +55,7 @@ def parse_gemini_response(text):
 
 async def get_gemini_fix(command, error_message):
     client = GeminiClient(psid, psidts)
-    await client.init(timeout=30, auto_refresh=True)
+    await client.init(timeout=30, auto_refresh=True, verbose=False)
     prompt = (
         "You are a senior debugging assistant.\n\n"
         "You must analyze only the provided command and terminal error trace.\n"
