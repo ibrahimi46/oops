@@ -124,7 +124,8 @@ async def main():
     console.print(Panel(syntax, title="Suggested Fix", border_style="green"))
         
 
-    
+def run():
+    asyncio.run(main())
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    run()

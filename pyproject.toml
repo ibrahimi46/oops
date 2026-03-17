@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oops-cli"
+version = "0.1.0"
+description = "Run a failed command, get a structured fix suggestion powered by Gemini."
+requires-python = ">=3.10"
+dependencies = [
+    "gemini-webapi>=1.21.0",
+    "rich>=14.0.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+oops = "oops:run"
