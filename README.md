@@ -1,19 +1,13 @@
 # oops
 
-Oops is a tiny CLI that reruns a failing command, captures the error trace, and asks Gemini for a structured fix suggestion.
+oops is a tiny CLI that reruns a failing command, captures the error trace, and asks Gemini for a structured fix suggestion.
 
 ## Demo
-
-## Why oops
-
-- Fast feedback when a command fails
-- Clean terminal output with focused analysis
-- Structured response: file, error, and fix
 
 ## Installation
 
 ```bash
-pipx install git+https://github.com/YOUR_USERNAME/Oops.git
+pipx install git+https://github.com/ibrahimi46/oops.git
 ```
 
 Don't have `pipx`?
@@ -46,11 +40,21 @@ source ~/.zshrc
 oops "<your-failed-command>"
 ```
 
-If the command succeeds, Oops prints:
+Examples:
+
+```bash
+# React project
+oops "npm run dev"
+
+# Python project
+oops "python app.py"
+```
+
+If the command succeeds, oops prints:
 
 - No Errors Detected!
 
-If the command fails, Oops prints:
+If the command fails, oops prints:
 
 - Analysis panel (error file and short description)
 - Suggested Fix panel (actionable fix snippet/command)
