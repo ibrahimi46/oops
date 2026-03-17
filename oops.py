@@ -8,10 +8,7 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.syntax import Syntax
 import json
-from dotenv import load_dotenv
 
-
-load_dotenv()
 
 psid = os.getenv("GEMINI_1PSID")
 psidts = os.getenv("GEMINI_1PSIDTS")
