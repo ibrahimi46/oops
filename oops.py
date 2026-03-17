@@ -54,6 +54,9 @@ def parse_gemini_response(text):
         }      
 
 async def get_gemini_fix(command, error_message):
+    if not (psid and psidts):
+        console.print("[bold red] Missing required Keys PSID & PSIDTS [/bold red]")
+        sys.exit(1)
     client = GeminiClient(psid, psidts)
     await client.init(timeout=30, auto_refresh=True, verbose=False)
     prompt = (
