@@ -4,6 +4,10 @@ oops is a tiny CLI that reruns a failing command, captures the error trace, and 
 
 ## Demo
 
+https://github.com/user-attachments/assets/18aaefb5-57e3-49ff-8776-0a277ac7ff7a
+
+
+
 ## Installation
 
 ```bash
